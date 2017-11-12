@@ -15,6 +15,10 @@ app.get("/", function (req, res) {
   res.send("Hello World!");
 });
 
+app.get("/nombre", function (req, res) {
+  res.send("No programado aun! Pero sirve de prueba :P");
+});
+
 // Connect to the database before starting the application server.
 mongodb.MongoClient.connect("mongodb://heroku_h2btpplz:95qo9o56gqsfgi6srljkj0a68f@ds155315.mlab.com:55315/heroku_h2btpplz",function (err, database) {//process.env.MONGODB_URI, function (err, database) {
   if (err) {
