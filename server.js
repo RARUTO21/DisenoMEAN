@@ -19,6 +19,14 @@ app.get("/nombre", function (req, res) {
   res.send("No programado aun! Pero sirve de prueba :P");
 });
 
+app.get("/branchprueba", function (req, res) {
+  res.send("Esto deberia estar en el branch de prueba que hizo Anthony");
+});
+
+app.get("/branch2prueba", function (req, res) {
+  res.send("Esto deberia estar en el branch DOS de prueba que hizo Anthony");
+});
+
 // Connect to the database before starting the application server.
 mongodb.MongoClient.connect("mongodb://heroku_h2btpplz:95qo9o56gqsfgi6srljkj0a68f@ds155315.mlab.com:55315/heroku_h2btpplz",function (err, database) {//process.env.MONGODB_URI, function (err, database) {
   if (err) {
