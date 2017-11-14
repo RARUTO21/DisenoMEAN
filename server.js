@@ -2,6 +2,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
+var morgan = require("morgan");
+const path  = require("path");
+const http = require("http");
 
 //var CONTACTS_COLLECTION = "contacts";
 
@@ -11,20 +14,8 @@ app.use(bodyParser.json());
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
-app.get("/", function (req, res) {
-  res.send("Hello World!");
-});
-
-app.get("/nombre", function (req, res) {
-  res.send("No programado aun! Pero sirve de prueba :P");
-});
-
-app.get("/branchprueba", function (req, res) {
-  res.send("Esto deberia estar en el branch de prueba que hizo Anthony");
-});
-
-app.get("/branch2prueba", function (req, res) {
-  res.send("Esto deberia estar en el branch DOS de prueba que hizo Anthony");
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname,'src/index.html'));
 });
 
 // Connect to the database before starting the application server.
