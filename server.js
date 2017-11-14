@@ -13,6 +13,7 @@ var db;
 
 app.get("/", function (req, res) {
   res.send("Hello World!");
+  //res.sendFile(path.join(__dirname, 'src/index.html'));
 });
 
 app.get("/nombre", function (req, res) {
