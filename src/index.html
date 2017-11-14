@@ -13,16 +13,18 @@
 </head>
 <body >
    <p><h3>Seleccionar usuario</h3></p>
-  <select>
-      <option> Usuario</option>
-  </select> </t>
+  <select ngclass="selectpicker">
+    <option> ---- Seleccionar ---</option>
+    <option> raruto21</option>
+    <option> alvarodrx</option>
+  </select>
 
-  <button> Seleccionar</button>
+  <button class="btn-primary"> Seleccionar</button>
   <hr />
 
    <!-- Esta tabla muestra los artiículos en el inventario -->
    <h3>Art&iacute;culos en el inventario</h3>
-   <table style="height: 105px; width: 553px;">
+   <table style="height: 105px; width: 553px;" class="table-striped">
      <tbody>
      <tr>
        <td style="width: 318px;">&nbsp;T&iacute;tulo</td>
@@ -52,60 +54,69 @@
    </table>
    <p>&nbsp;</p>
    <p>&nbsp;</p>
+   <p>&nbsp;</p>
+
 
    <!-- Esta tabla maneja las notificaciones -->
    <h3>Notificaciones&nbsp;</h3>
-   <table style="height: 79px; width: 549px;">
+   <table style="height: 79px; width: 549px;" class="table-striped">
      <tbody>
      <tr>
        <td style="width: 479px;">&nbsp;</td>
-       <td style="width: 56px;"><button>✔</button><button>✘</button></td>
+       <td style="width: 56px;"><button class="btn-success">✔</button><button class="btn-danger">✘</button></td>
      </tr>
      <tr>
        <td style="width: 479px;">&nbsp;</td>
-       <td style="width: 56px;"><button>✔</button><button>✘</button></td>
+       <td style="width: 56px;"><button class="btn-success">✔</button><button class="btn-danger">✘</button></td>
      </tr>
      <tr>
        <td style="width: 479px;">&nbsp;</td>
-       <td style="width: 56px;"><button>✔</button><button>✘</button></td>
+       <td style="width: 56px;"><button class="btn-success">✔</button><button class="btn-danger">✘</button></td>
      </tr>
      <tr>
        <td style="width: 479px;">&nbsp;</td>
-       <td style="width: 56px;"><button>✔</button><button>✘</button></td>
+       <td style="width: 56px;"><button class="btn-success">✔</button><button class="btn-danger">✘</button></td>
      </tr>
      </tbody>
    </table>
-
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
 
    <!-- Este formulario se encarga de buscar artículos-->
-   <p>&nbsp;</p>
    <h3>Buscar art&iacute;culo</h3>
    <form>
-     <p>T&iacute;tulo: <input name="titulo" type="text" /><br />  <br />
-       Usuarios<br />
-       <input type="checkbox" name="todos" value="Todos" checked> Todos<br>
-       <input type="checkbox" name="favoritos" value="Favoritos" > Favoritos<br>
-       <input type="checkbox" name="cercanos" value="Cercanos" > Cercanos<br>
-       <br />
-       Estado<br />
-       <input type="checkbox" name="disponible" value="Disponible" checked> Disponible<br>
-       <input type="checkbox" name="no_disponible" value="No_Disponible" > No disponible<br>
-       <input type="checkbox" name="prestado" value="Prestado" > Prestado<br>
-       <br />
-       Condici&oacute;n<br />
-       <input type="checkbox" name="nuevo" value="Nuevo" checked> Nuevo<br>
-       <input type="checkbox" name="usado" value="Usado" > Usado<br>
-       <input type="checkbox" name="viejo" value="Viejo" > Viejo<br>
-       <br />
-       <input type="submit" value="Buscar">
+     <p><b>T&iacute;tulo:</b> <input name="titulo" type="text" class="form-control" width="5"><br />
+
+       <b>Usuarios:</b><br />
+       <label class="checkbox-inline"><input type="checkbox" name="todos" value="Todos" checked> Todos<br></label>
+       <label class="checkbox-inline"><input type="checkbox"  name="favoritos" value="Favoritos" > Favoritos<br></label>
+       <label class="checkbox-inline"><input type="checkbox"  name="cercanos" value="Cercanos" > Cercanos<br></label>
+       <br /><br />
+
+       <b>Estado:</b><br />
+       <label class="checkbox-inline"><input type="checkbox" name="disponible" value="Disponible" checked> Disponible<br></label>
+       <label class="checkbox-inline"><input type="checkbox" name="no_disponible" value="No_Disponible" > No disponible<br></label>
+       <label class="checkbox-inline"><input type="checkbox" name="prestado" value="Prestado" > Prestado<br></label>
+       <br /> <br />
+
+       <b>Condici&oacute;n:</b><br />
+       <label class="checkbox-inline"><input type="checkbox" name="nuevo" value="Nuevo" checked> Nuevo<br></label>
+       <label class="checkbox-inline"><input type="checkbox" name="usado" value="Usado" > Usado<br></label>
+       <label class="checkbox-inline"><input type="checkbox" name="viejo" value="Viejo" > Viejo<br></label>
+       <br /> <br />
+
+       <input type="submit" value="Buscar" class="btn-primary">
 
    </form>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
    <p>&nbsp;</p>
 
 
    <!-- Esta tabla muestra los resultados de la búsqueda -->
    <h3>Resultados de la b&uacute;squeda</h3>
-   <table style="height: 90px; width: 542px;">
+   <table style="height: 90px; width: 542px;" class="table-striped">
      <tbody>
      <tr>
        <td style="width: 313px;">&nbsp;T&iacute;tulo</td>
