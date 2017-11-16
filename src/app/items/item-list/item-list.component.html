@@ -1,0 +1,9 @@
+{{itemsUsuarios()}}
+<ul class="list-group">
+  <li class="list-group-item"
+      *ngFor="let item of itemsAux">
+    {{item.itemName}}<br>
+    Owner: {{item.itemOwner}}
+  </li>
+
+</ul>
