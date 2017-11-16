@@ -2,12 +2,12 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
-var morgan = require("morgan");
+//var morgan = require("morgan");
 const path  = require("path");
-const http = require("http");
+//const http = require("http");
 var fs = require('fs');
-var index = fs.readFileSync('./src/index.html');
-var ejs = require('ejs');
+//var index = fs.readFileSync('./src/index.html');
+//var ejs = require('ejs');
 
 var USERS_COLLECTION = "users";
 var ITEMS_COLLECTION = "items";
